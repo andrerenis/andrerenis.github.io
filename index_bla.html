@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>André Renis @ github.io</title>
+    <style>
+        body {
+            background-color: black;
+            font-family: "Courier New";
+            color: green;
+            font-size: 24px;
+            margin-top: 100px;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+<div id="target"></div>
+<script type="application/javascript">
+
+    const map = new Map();
+    map.set("Mission:","Find interesting projects");
+    map.set("Location:","Earth, Europe, Germany, Berlin");
+    map.set("Commander:","André Renis");
+    map.set("Skills:","Python, Java, PHP, Javascript, SQL, RDF");
+
+    let curr = 0;
+    let Write = function writeCharacter(text) {
+        let elem = document.getElementById('target');
+        elem.innerHTML = elem.innerHTML + text.charAt(curr++);
+        window.setTimeout(writeCharacter, 60);
+    };
+    Write();
+    function writeLine(){
+        for (const [key, value] of map.entries()) {
+            if (curr < text.length) {
+
+            } else {
+                curr = 0;
+            }
+        }
+    }
+</script>
+</body>
+</html>
